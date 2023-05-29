@@ -273,6 +273,8 @@ const handlePdfDownload = () => {
     //   { title: "Total Earnning" },
     //   { title: "Overall Earning" },
     // ];
+    // header:[[]],
+    // body:[[]],
     head: [tableHeader?.map((item) => item.title)],
     body: [
       ["Product or service name", "Category", "2", "$450", "$50", "$1000"],
@@ -506,7 +508,9 @@ const count = ref(0);
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="count++"
+    style="margin-right:10px ;"
+    >count is {{ count }}</button>
     <button type="button" @click="handlePdfDownload">Download</button>
     <p>
       Edit
